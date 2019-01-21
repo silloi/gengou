@@ -1,0 +1,2 @@
+module GengouHelper
+end

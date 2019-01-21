@@ -24,6 +24,7 @@ gem 'jbuilder',                '2.7.0'
 
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'wareki'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # gem 'rails', '5.1.6'

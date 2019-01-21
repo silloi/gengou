@@ -1,0 +1,19 @@
+<% provide(:title, 'Generate New Gengou') %>
+<div class="center jumbotron">
+  <h3>新元号候補</h3>
+  <h1><%= @post_gengou %></h1>
+  <table>
+    <tr>
+      <td><%= @gengou0 %>：</td>
+      <td>登場回数 &nbsp; <%= @gengou0_count %> &nbsp; </td>
+      <td>回</td>
+    </tr>
+    <tr>
+      <td><%= @gengou1 %>：</td>
+      <td>登場回数 &nbsp; <%= @gengou1_count %> &nbsp; </td>
+      <td>回</td>
+    </tr>
+  </table>
+  <p><%= link_to "応募", generate_path, class: "btn btn-lg btn-primary" %></p>
+  <p><%= link_to "再籤", generate_path, class: "btn btn-lg btn-primary" %></p>
+</div>
