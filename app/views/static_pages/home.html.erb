@@ -5,4 +5,10 @@
   <h2>Post Posted</h2>
   <p>Gengou Dearby Home</p>
   <%= link_to "Generate New Gengou", generate_path, class: "btn btn-lg btn-primary" %>
+  <% if logged_in? %>
+    <h1>こんにちは、<%=  current_user.user_name %>さん</h1>
+    <p>ユーザー用ページです。</p>
+    <% else %>
+    <p>ログインしてください</p>
+  <% end %>
 </div>
