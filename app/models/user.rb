@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :posts, dependent: :destroy
+
   def self.find_or_create_from_auth(auth)
       uid = auth[:uid]
       user_name = auth[:info][:name]
