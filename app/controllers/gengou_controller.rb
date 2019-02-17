@@ -10,7 +10,7 @@ class GengouController < ApplicationController
     @gengou0_count = @gengous.count {|gengou| gengou.include?(@gengou0) }
     @gengou1_count = @gengous.count {|gengou| gengou.include?(@gengou1) }
   
-    @post = current_user.posts.build if logged_in?
+#    @post = current_user.posts.build if logged_in?
   end
 
   def after_login

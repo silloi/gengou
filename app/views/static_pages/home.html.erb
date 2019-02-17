@@ -3,6 +3,9 @@
   <h1>Gengou Dearby</h1>
   <h2>Button Here</h2>
   <h2>Post Posted</h2>
+  <ul class="posts">
+  </ul>
+
   <p>Gengou Dearby Home</p>
   <%= link_to "Generate New Gengou", generate_path, class: "btn btn-lg btn-primary" %>
   <% if logged_in? %>
@@ -10,5 +13,14 @@
     <p>ユーザー用ページです。</p>
     <% else %>
     <p>ログインしてください</p>
+  <% end %>
+
+  <% if logged_in? %>
+  <div class="row">
+    <div class="col-md-8">
+      <h3>Post Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
   <% end %>
 </div>

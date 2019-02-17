@@ -18,7 +18,7 @@
   <% if logged_in? %>
     <p><%= button_to "応募", posts_path, params: {:post => {:content => @post_gengou}}, :method => :post, class: "btn btn-lg btn-primary"%></p>
   <% else %>
-    <p><%= button_to "応募(Twitter認証が必要)", '/auth/:provider/callback', :method => :get, class: "btn btn-lg btn-primary"%></p>
+    <p><%= button_to "応募(Twitter認証が必要)", '/auth/twitter', :method => :get, class: "btn btn-lg btn-primary"%></p>
   <% end %>
   <p><%= button_to "再籤", generate_path, :method => :get, class: "btn btn-lg btn-primary"%></p>
   <% if flash[:notice] %>

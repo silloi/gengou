@@ -6,6 +6,7 @@ class PostsController < ApplicationController
       flash[:success] = "Posts created" 
       redirect_to root_url
     else
+      @feed_items = []
       render 'static_pages/about'
     end
   end
@@ -13,6 +14,6 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:content)
+      params.require(:post).permit(:content, :user_id)
     end
 end
