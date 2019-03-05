@@ -1,8 +1,9 @@
-<li id="post-<%= post.id %>">
 
-  <span class="user"><%= link_to "@#{post.user.nickname}", "https://twitter.com/#{post.user.nickname}" %></span>
-  <span class="content"><%= post.content %></span>
-  <span class="timestamp">
+<tr id="post-<%= post.id %>">
+
+  <td class="user"><%= link_to "@#{post.user.nickname}", "https://twitter.com/#{post.user.nickname}" %> &nbsp; </td>
+  <td class="content"><%= post.content %> &nbsp; </td>
+  <td class="timestamp">
     Posted <%= time_ago_in_words(post.created_at) %> ago.
-  </span>
-</li>
+  </td>
+</tr>

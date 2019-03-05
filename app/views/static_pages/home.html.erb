@@ -19,7 +19,14 @@
   <div class="row">
     <div class="col-md-8">
       <h3>Post Feed</h3>
-      <%= render 'shared/feed' %>
+      <table>
+        <tr class="title">
+          <td>Twitter ID</td>
+          <td>新元号</td>
+          <td>投稿時刻</td>
+        </tr>
+        <%= render 'shared/feed' %>
+      </table>
     </div>
   </div>
   <% end %>
