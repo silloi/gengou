@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = "Posts created" 
-      redirect_to root_url
+      redirect_to '/generate'
     else
       @feed_items = []
       render 'static_pages/about'
